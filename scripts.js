@@ -1,9 +1,12 @@
 const displayInput = document.getElementById("displayBig");
+displayInput.maxlength = 10;
 const displaySmall = document.getElementById("displaySmall");
+displaySmall.maxlength = 18;
 
 let i = 0;
 let num = [];
 let currentOp = "";
+let lastOp = "";
 let opStatus = false;
 
 function numInput(num) { 
@@ -21,13 +24,14 @@ function numInput(num) {
 
 function opInput(op) {
     num[i] = displayInput.textContent;
+    lastOp = currentOp;
     currentOp = op.value;
     if(num.length < 2) {
         displaySmall.textContent = displayInput.textContent + currentOp;
     }
     else {
         displaySmall.textContent = displaySmall.textContent + displayInput.textContent + currentOp;
-        let answer = operate(num[i-1],num[i],currentOp);
+        let answer = operate(num[i-1],num[i],lastOp);
         num[i] = answer;
         displayInput.textContent = answer;
     }
@@ -43,6 +47,7 @@ function equals(op) {
     displayInput.textContent = answer;
     num.length = 0; //reset array to allow more operations to be conducted
     i = 0;
+    opStatus=true;
 }
 
 function backspace() {
@@ -59,7 +64,6 @@ function clearAll() {
 }
 
 function operate(num1, num2, op) {
-    console.log(num1,num2,op);
     switch(op) {
         case "+":
             return sum(num1,num2);
@@ -74,7 +78,6 @@ function operate(num1, num2, op) {
 }
 
 function sum(num1,num2) {
-    console.log(num1,num2)
     return (+num1 + +num2);
 }
 
@@ -86,7 +89,7 @@ function multiply(num1,num2) {
     return num1 * num2;
 }
 
-function divide(num1,num2) { //idea: make the whole calculator turn red on 0
+function divide(num1,num2) {
     if(num2 == 0) {
         return "NAUGHTY!"
     }

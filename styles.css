@@ -22,6 +22,8 @@ body {
     border-radius: 3px;
     width: 400px;
     text-align: right;
+    text-overflow: "";
+    overflow: hidden;
     
 }
 
@@ -29,6 +31,8 @@ body {
     font-size: 14px;
     margin: 5px;
     min-height: 20px;
+    text-overflow: "";
+    overflow: hidden;
     
 }
 
