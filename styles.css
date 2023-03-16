@@ -25,15 +25,17 @@ body {
     
 }
 
-.display1 {
+.displaySmall {
     font-size: 14px;
     margin: 5px;
+    min-height: 20px;
     
 }
 
-.display2 {
+.displayBig {
     font-size: 42px;
     margin: 5px;
+    min-height: 50px;
     
 }
 

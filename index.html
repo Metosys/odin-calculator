@@ -11,26 +11,30 @@
 <body>
     <div class="calculator">
         <div class="display">
-            <div class="display1">Small Numbers</div>
-            <div class="display2">Big Numbers</div>
+            <div class="displaySmall" id="displaySmall"></div>
+            <div class="displayBig" id="displayBig">0</div>
         </div>
         <div class="numpad">
-            <button class="num btn" id="1">1</button>
-            <button class="num btn" id="1">2</button>
-            <button class="num btn" id="1">3</button>
-            <button class="op btn" id="1">+</button>
-            <button class="num btn" id="1">4</button>
-            <button class="num btn" id="1">5</button>
-            <button class="num btn" id="1">6</button>
-            <button class="op btn" id="1">-</button>
-            <button class="num btn" id="1">7</button>
-            <button class="num btn" id="1">8</button>
-            <button class="num btn" id="1">9</button>
-            <button class="op btn" id="1">x</button>
+            <button class="op btn" id="clear" onclick="clearAll()">C</button>
+            <button class="op btn" id="backspace" onclick="backspace()"><<</button>
+            <button class="op btn" >%</button>
+            <button class="op btn" id="1">Pwr</button>
+            <button class="num btn" id="1" value='1' onclick='numInput(this)'>1</button>
+            <button class="num btn" id="2" value='2' onclick='numInput(this)'>2</button>
+            <button class="num btn" id="3" value="3" onclick="numInput(this)">3</button>
+            <button class="op btn" id="add" value="+" onclick="opInput(this)">+</button>
+            <button class="num btn" id="4" value="4" onclick="numInput(this)">4</button>
+            <button class="num btn" id="5" value="5" onclick="numInput(this)">5</button>
+            <button class="num btn" id="6" value="6" onclick="numInput(this)">6</button>
+            <button class="op btn" id="sub" value="-" onclick="opInput(this)">-</button>
+            <button class="num btn" id="7" value="7" onclick="numInput(this)">7</button>
+            <button class="num btn" id="8" value="8" onclick="numInput(this)">8</button>
+            <button class="num btn" id="9" value="9" onclick="numInput(this)">9</button>
+            <button class="op btn" id="mult" value="x" onclick="opInput(this)">x</button>
             <button class="op btn" id="1">.</button>
-            <button class="num btn" id="1">0</button>
-            <button class="equal btn" id="1">=</button>
-            <button class="op btn" id="1">÷</button>
+            <button class="num btn" id="0" value="0" onclick="numInput(this)">0</button>
+            <button class="equal btn" id="equals" value="=" onclick="equals(this)">=</button>
+            <button class="op btn" id="divide" value="÷" onclick="opInput(this)">÷</button>
         </div>
     </div>
 </body>
