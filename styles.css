@@ -66,3 +66,7 @@ body {
 .equal {
     background-color: rgb(255, 0, 221);
 }
+
+.powerOff {
+    background-color: black;
+}

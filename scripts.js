@@ -106,7 +106,19 @@ function divide(num1,num2) {
     }
 }
 
+function percentage() {
+    per = displayInput.textContent;
+    percent = per / 100;
+    num[i] = percent
+    displayInput.textContent = percent;
+}
+
 function convertAnswer(answer) {
     ans = answer.toString();
     return ans.substring(0,16);
+}
+
+function powerButton() { //just turns display black
+    let display = document.getElementById("displayContainer");
+    display.classList.toggle("powerOff");
 }

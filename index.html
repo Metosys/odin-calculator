@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="calculator">
-        <div class="display">
+        <div class="display" id="displayContainer">
             <div class="displaySmall" id="displaySmall"></div>
             <div class="displayBig" id="displayBig">0</div>
         </div>
         <div class="numpad">
             <button class="op btn" id="clear" onclick="clearAll()">C</button>
             <button class="op btn" id="backspace" onclick="backspace()"><<</button>
-            <button class="op btn" >%</button>
-            <button class="op btn" id="1">Pwr</button>
+            <button class="op btn" onclick="percentage()">%</button>
+            <button class="op btn" id="power" onclick="powerButton()">I/O</button>
             <button class="num btn" id="1" value='1' onclick='numInput(this)'>1</button>
             <button class="num btn" id="2" value='2' onclick='numInput(this)'>2</button>
             <button class="num btn" id="3" value="3" onclick="numInput(this)">3</button>
