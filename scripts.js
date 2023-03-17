@@ -1,5 +1,6 @@
 const displayInput = document.getElementById("displayBig");
 const displaySmall = document.getElementById("displaySmall");
+const displayContainer = document.getElementById("displayContainer");
 const decStatus = document.getElementById("decimal");
 
 let i = 0;
@@ -69,6 +70,8 @@ function clearAll() {
     opStatus = false;
     displayInput.textContent = "0";
     displaySmall.textContent = "";
+    displayContainer.classList.remove("errorBad");
+    
 }
 
 function operate(num1, num2, op) {
@@ -99,6 +102,7 @@ function multiply(num1,num2) {
 
 function divide(num1,num2) {
     if(num2 == 0) {
+        displayContainer.classList.add("errorBad");
         return "NAUGHTY!"
     }
     else {
@@ -119,6 +123,5 @@ function convertAnswer(answer) {
 }
 
 function powerButton() { //just turns display black
-    let display = document.getElementById("displayContainer");
-    display.classList.toggle("powerOff");
+    displayContainer.classList.toggle("powerOff");
 }

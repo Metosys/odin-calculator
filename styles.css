@@ -70,3 +70,8 @@ body {
 .powerOff {
     background-color: black;
 }
+
+.errorBad {
+    background-color: red;
+    color: white;
+}
